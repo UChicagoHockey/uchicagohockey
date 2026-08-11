@@ -1,0 +1,49 @@
+---
+layout: default
+title: Schedule
+---
+
+<div class="section">
+  <div class="section-head">
+    <h2>Schedule &amp; Results</h2>
+    <span class="count">{{ site.data.schedule | size }} Games</span>
+  </div>
+
+  <table class="schedule-table">
+    <thead>
+      <tr>
+        <th>Date</th>
+        <th>Home/Away</th>
+        <th>Opponent</th>
+        <th>Time</th>
+        <th>Location</th>
+        <th>Result</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for g in site.data.schedule %}
+      <tr>
+        <td>{{ g.date }}</td>
+        <td>
+          {% if g.home_away == "HOME" %}
+            <span class="tag tag-home">HOME</span>
+          {% else %}
+            <span class="tag tag-away">AWAY</span>
+          {% endif %}
+        </td>
+        <td><strong>{{ g.opponent }}</strong></td>
+        <td>{{ g.time }}</td>
+        <td>{{ g.location }}</td>
+        <td>
+          {% if g.result and g.result != "" %}
+            <span class="result-pill result-{{ g.result }}">{{ g.result }}</span>
+            &nbsp;{{ g.score }}
+          {% else %}
+            <span class="result-pending">Upcoming</span>
+          {% endif %}
+        </td>
+      </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>

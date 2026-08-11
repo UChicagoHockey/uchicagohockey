@@ -1,0 +1,34 @@
+---
+layout: default
+title: Roster
+---
+
+<div class="section">
+  <div class="section-head">
+    <h2>Roster</h2>
+    <span class="count">{{ site.data.roster | size }} Players</span>
+  </div>
+
+  <div class="roster-grid">
+    {% for p in site.data.roster %}
+    <div class="player-card">
+      <div class="player-photo">
+        <span class="player-pos-badge">{{ p.position }}</span>
+        {% if p.photo and p.photo != "" %}
+          <img src="{{ p.photo }}" alt="{{ p.name }}">
+        {% else %}
+          <span class="jersey-num">#{{ p.number }}</span>
+        {% endif %}
+      </div>
+      <div class="player-body">
+        <div class="pname">{{ p.name }}</div>
+        <div class="player-meta">
+          <span>#{{ p.number }} · {{ p.position }} · {{ p.year }}</span>
+          <span>{{ p.height }}</span>
+          <span>{{ p.hometown }}</span>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>

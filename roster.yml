@@ -1,0 +1,51 @@
+# ── ROSTER ──────────────────────────────────────────────
+# Add/edit players here. Leave photo blank to show a jersey-number placeholder.
+# position: F (Forward), D (Defense), G (Goalie)
+
+- number: 88
+  name: "Jack Reilly"
+  position: F
+  year: "Sr"
+  hometown: "Minneapolis, MN"
+  height: "6'1\""
+  photo: ""
+
+- number: 4
+  name: "Owen Marsh"
+  position: D
+  year: "Jr"
+  hometown: "Chicago, IL"
+  height: "5'11\""
+  photo: ""
+
+- number: 30
+  name: "Theo Lindqvist"
+  position: G
+  year: "So"
+  hometown: "Duluth, MN"
+  height: "6'2\""
+  photo: ""
+
+- number: 17
+  name: "Sam Okafor"
+  position: F
+  year: "Fr"
+  hometown: "Toronto, ON"
+  height: "5'10\""
+  photo: ""
+
+- number: 9
+  name: "Miles Chen"
+  position: F
+  year: "Jr"
+  hometown: "Vancouver, BC"
+  height: "6'0\""
+  photo: ""
+
+- number: 22
+  name: "Dylan Pratt"
+  position: D
+  year: "Sr"
+  hometown: "Boston, MA"
+  height: "6'3\""
+  photo: ""

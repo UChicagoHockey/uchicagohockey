@@ -1,0 +1,44 @@
+# ── SCHEDULE ────────────────────────────────────────────
+# result: W, L, T, or leave blank for an upcoming game
+# score: "4-2" format, leave blank if not played yet
+# home_away: HOME or AWAY
+
+- date: "2026-09-20"
+  opponent: "Marquette Club Hockey"
+  home_away: HOME
+  time: "7:30 PM"
+  location: "Johnny's IceHouse West"
+  result: ""
+  score: ""
+
+- date: "2026-09-27"
+  opponent: "Wisconsin-Milwaukee"
+  home_away: AWAY
+  time: "6:00 PM"
+  location: "Milwaukee, WI"
+  result: ""
+  score: ""
+
+- date: "2026-10-04"
+  opponent: "Illinois Club Hockey"
+  home_away: HOME
+  time: "8:00 PM"
+  location: "Johnny's IceHouse West"
+  result: "W"
+  score: "5-3"
+
+- date: "2026-10-11"
+  opponent: "Northwestern"
+  home_away: AWAY
+  time: "7:00 PM"
+  location: "Evanston, IL"
+  result: "L"
+  score: "2-4"
+
+- date: "2026-10-18"
+  opponent: "DePaul"
+  home_away: HOME
+  time: "7:30 PM"
+  location: "Johnny's IceHouse West"
+  result: ""
+  score: ""

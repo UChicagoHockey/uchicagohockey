@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title }}{% if page.title %} · {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Barlow:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+</head>
+<body>
+
+  <nav class="nav">
+    <div class="nav-inner">
+      <a class="nav-brand" href="{{ '/' | relative_url }}">
+        <span class="puck">UC</span>
+        <span class="name">UChicago Hockey</span>
+      </a>
+      <ul class="nav-links">
+        <li><a href="{{ '/' | relative_url }}" class="{% if page.url == '/' %}active{% endif %}">Home</a></li>
+        <li><a href="{{ '/roster.html' | relative_url }}" class="{% if page.url contains 'roster' %}active{% endif %}">Roster</a></li>
+        <li><a href="{{ '/schedule.html' | relative_url }}" class="{% if page.url contains 'schedule' %}active{% endif %}">Schedule</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  {{ content }}
+
+  <footer class="site-footer">
+    <p><strong>UChicago Club Ice Hockey</strong> &nbsp;·&nbsp; American Collegiate Hockey Association (Club)</p>
+    <p>Not affiliated with UChicago Athletics. Built and maintained by the team.</p>
+  </footer>
+
+</body>
+</html>

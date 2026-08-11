@@ -1,0 +1,58 @@
+---
+layout: default
+title: Home
+---
+
+{% assign wins = 0 %}
+{% assign losses = 0 %}
+{% assign ties = 0 %}
+{% assign next_game = nil %}
+{% for g in site.data.schedule %}
+  {% if g.result == "W" %}{% assign wins = wins | plus: 1 %}{% endif %}
+  {% if g.result == "L" %}{% assign losses = losses | plus: 1 %}{% endif %}
+  {% if g.result == "T" %}{% assign ties = ties | plus: 1 %}{% endif %}
+  {% if g.result == "" and next_game == nil %}{% assign next_game = g %}{% endif %}
+{% endfor %}
+
+<header class="hero">
+  <div class="hero-number">88</div>
+  <div class="hero-inner">
+    <span class="hero-eyebrow">ACHA Club Hockey · Est. 2009</span>
+    <h1>UChicago<br>Ice Hockey</h1>
+    <p class="sub">Maroon on the ice. Follow the roster, catch every game on the schedule, and see how the season is shaping up.</p>
+    <div class="hero-cta">
+      <a class="btn btn-primary" href="{{ '/schedule.html' | relative_url }}">See Schedule</a>
+      <a class="btn btn-ghost" href="{{ '/roster.html' | relative_url }}">Meet the Team</a>
+    </div>
+  </div>
+</header>
+
+<div class="rink-divider"></div>
+
+<div class="section" style="padding-top:0;">
+  <div class="stat-strip">
+    <div class="stat"><div class="num">{{ wins }}</div><div class="lbl">Wins</div></div>
+    <div class="stat"><div class="num">{{ losses }}</div><div class="lbl">Losses</div></div>
+    <div class="stat"><div class="num">{{ ties }}</div><div class="lbl">Ties</div></div>
+    <div class="stat"><div class="num">{{ site.data.roster | size }}</div><div class="lbl">Roster Size</div></div>
+  </div>
+</div>
+
+<div class="section" style="padding-top:0;">
+  <div class="section-head">
+    <h2>Next Game</h2>
+  </div>
+  {% if next_game %}
+  <table class="schedule-table">
+    <tr>
+      <td><strong>{{ next_game.date }}</strong></td>
+      <td>{% if next_game.home_away == "HOME" %}<span class="tag tag-home">HOME</span>{% else %}<span class="tag tag-away">AWAY</span>{% endif %}</td>
+      <td><strong>vs. {{ next_game.opponent }}</strong></td>
+      <td>{{ next_game.time }}</td>
+      <td>{{ next_game.location }}</td>
+    </tr>
+  </table>
+  {% else %}
+  <p>No upcoming games scheduled yet — check back soon.</p>
+  {% endif %}
+</div>
