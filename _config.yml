@@ -1,6 +1,6 @@
 title: UChicago Club Hockey
 description: Official site of UChicago Club Ice Hockey — Roster, Schedule & Results
-baseurl: "" # repo name goes here if not using a custom domain, e.g. "/uchicago-hockey"
+baseurl: "/uchicagohockey" # repo name goes here if not using a custom domain, e.g. "/uchicago-hockey"
 url: "" # e.g. "https://yourusername.github.io"
 
 markdown: kramdown
